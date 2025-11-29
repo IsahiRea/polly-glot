@@ -1,16 +1,98 @@
-# React + Vite
+# PollyGlot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive translation application built with React and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Clean, intuitive translation interface
+- Support for multiple languages (French, Spanish, Japanese)
+- Fully responsive design (mobile, tablet, desktop)
+- Mobile-first approach with progressive enhancement
+- Fast development with Vite HMR
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** - Modern React with hooks
+- **Vite** - Fast build tool and dev server
+- **React Router** - Client-side routing
+- **Vanilla CSS** - Custom responsive design without frameworks
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v18 or higher recommended)
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/IsahiRea/polly-glot.git
+
+# Navigate to project directory
+cd polly-glot
+
+# Install dependencies
+npm install
+```
+
+### Development
+
+```bash
+# Start development server
+npm run dev
+```
+
+The app will be available at `http://localhost:5173/`
+
+### Build
+
+```bash
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+### Linting
+
+```bash
+# Run ESLint
+npm run lint
+```
+
+## Project Structure
+
+```
+polly-glot/
+├── src/
+│   ├── assets/         # Images, icons, and static assets
+│   ├── pages/          # Page components
+│   ├── styles/         # CSS files
+│   ├── App.jsx         # Main app component with routing
+│   └── main.jsx        # Application entry point
+├── index.html          # HTML template
+└── vite.config.js      # Vite configuration
+```
+
+## Responsive Design
+
+The application uses a mobile-first approach with the following breakpoints:
+
+- **Mobile**: < 768px (base styles)
+- **Tablet**: 768px - 1023px
+- **Desktop**: 1024px - 1439px
+- **Large Desktop**: 1440px+
+
+## Contributing
+
+1. Create a feature branch from `main`
+2. Make your changes
+3. Test thoroughly across different screen sizes
+4. Submit a pull request
+
+## License
+
+This project is private and not licensed for public use.
