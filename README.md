@@ -1,10 +1,11 @@
 # PollyGlot
 
-A modern, responsive translation application built with React and Vite.
+A modern, responsive translation application built with React and Vite, powered by OpenAI.
 
 ## Features
 
 - Clean, intuitive translation interface
+- AI-powered translations using OpenAI GPT-4o-mini
 - Support for multiple languages (French, Spanish, Japanese)
 - Fully responsive design (mobile, tablet, desktop)
 - Mobile-first approach with progressive enhancement
@@ -15,6 +16,7 @@ A modern, responsive translation application built with React and Vite.
 - **React 19** - Modern React with hooks
 - **Vite** - Fast build tool and dev server
 - **React Router** - Client-side routing
+- **OpenAI SDK** - AI-powered translations
 - **Vanilla CSS** - Custom responsive design without frameworks
 
 ## Getting Started
@@ -23,6 +25,7 @@ A modern, responsive translation application built with React and Vite.
 
 - Node.js (v18 or higher recommended)
 - npm or yarn
+- OpenAI API key ([Get one here](https://platform.openai.com/api-keys))
 
 ### Installation
 
@@ -35,6 +38,18 @@ cd polly-glot
 
 # Install dependencies
 npm install
+
+# Set up environment variables
+cp .env.example .env
+```
+
+### Configuration
+
+1. Copy `.env.example` to `.env`
+2. Add your OpenAI API key to the `.env` file:
+
+```
+VITE_OPENAI_API_KEY=your_api_key_here
 ```
 
 ### Development
@@ -70,11 +85,24 @@ polly-glot/
 ├── src/
 │   ├── assets/         # Images, icons, and static assets
 │   ├── pages/          # Page components
+│   ├── services/       # API services (OpenAI integration)
 │   ├── styles/         # CSS files
 │   ├── App.jsx         # Main app component with routing
 │   └── main.jsx        # Application entry point
+├── .env.example        # Environment variables template
 ├── index.html          # HTML template
 └── vite.config.js      # Vite configuration
+```
+
+## API Usage
+
+The app uses OpenAI's GPT-4o-mini model for translations. The translation service is located in `src/services/openai.js`:
+
+```javascript
+import { translateText } from './services/openai'
+
+// Translate text to a target language
+const translation = await translateText('Hello, world!', 'french')
 ```
 
 ## Responsive Design

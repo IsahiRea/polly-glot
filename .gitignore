@@ -23,3 +23,8 @@ CLAUDE.md
 *.njsproj
 *.sln
 *.sw?
+
+# Environment variables
+.env
+.env.local
+.env.*.local
