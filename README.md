@@ -120,7 +120,3 @@ The application uses a mobile-first approach with the following breakpoints:
 2. Make your changes
 3. Test thoroughly across different screen sizes
 4. Submit a pull request
-
-## License
-
-This project is private and not licensed for public use.
