@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../styles/Home.css'
+import { translateText } from '../services/openai'
 import parrotImg from '../assets/images/parrot.png'
 import worldMapImg from '../assets/images/world-map.svg'
 import frFlagImg from '../assets/images/fr-flag.png'
@@ -9,11 +11,29 @@ import jpnFlagImg from '../assets/images/jpn-flag.png'
 function Home() {
   const [textToTranslate, setTextToTranslate] = useState('How are you?')
   const [selectedLanguage, setSelectedLanguage] = useState('french')
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState(null)
+  const navigate = useNavigate()
 
-  const handleTranslate = (e) => {
+  const handleTranslate = async (e) => {
     e.preventDefault()
-    // Translation logic will be implemented later
-    console.log('Translating:', textToTranslate, 'to', selectedLanguage)
+    setError(null)
+    setIsLoading(true)
+
+    try {
+      const translatedText = await translateText(textToTranslate, selectedLanguage)
+      navigate('/translation', {
+        state: {
+          originalText: textToTranslate,
+          translatedText,
+          language: selectedLanguage
+        }
+      })
+    } catch (err) {
+      setError(err.message || 'Translation failed. Please try again.')
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -118,9 +138,12 @@ function Home() {
             </div>
           </div>
 
+          {/* Error Message */}
+          {error && <p className="error-message">{error}</p>}
+
           {/* Translate Button */}
-          <button type="submit" className="translate-button">
-            Translate
+          <button type="submit" className="translate-button" disabled={isLoading}>
+            {isLoading ? 'Translating...' : 'Translate'}
           </button>
         </form>
       </div>

@@ -1,0 +1,370 @@
+/* Mobile-first styles for Translation page */
+
+.translation-container {
+  background: white;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+/* Header section with dark background and world map */
+.translation-header {
+  background: #0d182e;
+  height: 213px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.translation-header .world-map {
+  position: absolute;
+  top: -18px;
+  left: 89px;
+  width: 558.857px;
+  height: 217.333px;
+  opacity: 0.3;
+}
+
+.translation-header .parrot-logo {
+  position: absolute;
+  top: 65px;
+  left: 42px;
+  width: 94.884px;
+  height: 84.803px;
+}
+
+.translation-header .brand-text {
+  position: absolute;
+  top: 69.07px;
+  left: 151.9px;
+}
+
+.translation-header .brand-name {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 800;
+  font-size: 43.419px;
+  color: limegreen;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.translation-header .brand-tagline {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 12.212px;
+  color: white;
+  margin: 0;
+  margin-top: 15px;
+  width: 196px;
+}
+
+/* Translation card */
+.translation-card {
+  background: white;
+  border: 4px solid #252f42;
+  border-radius: 15px;
+  margin: 30px 13px;
+  padding: 24px;
+  position: relative;
+}
+
+.translation-section {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #035a9d;
+  margin: 0;
+}
+
+.language-flag {
+  width: 30px;
+  height: 20px;
+  border: 1px solid #999999;
+  object-fit: cover;
+}
+
+.translation-text {
+  background: #eff0f4;
+  border-radius: 8px;
+  padding: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #333333;
+  margin: 0;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.no-translation {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Back button */
+.back-button {
+  background: #035a9d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  height: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background: #024780;
+}
+
+.back-button:active {
+  background: #023566;
+}
+
+.back-button:focus {
+  outline: 2px solid #035a9d;
+  outline-offset: 2px;
+}
+
+/* Responsive design for larger screens */
+
+/* Tablet - 768px and up */
+@media (min-width: 768px) {
+  .translation-container {
+    max-width: 700px;
+  }
+
+  .translation-header {
+    height: 300px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .translation-header .world-map {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 280px;
+  }
+
+  .translation-header .parrot-logo {
+    top: 85px;
+    left: 80px;
+    width: 130px;
+    height: 116px;
+  }
+
+  .translation-header .brand-text {
+    top: 100px;
+    left: 230px;
+  }
+
+  .translation-header .brand-name {
+    font-size: 60px;
+  }
+
+  .translation-header .brand-tagline {
+    font-size: 16px;
+    margin-top: 18px;
+    width: 250px;
+  }
+
+  .translation-card {
+    margin: 50px auto;
+    padding: 45px 50px;
+    max-width: 580px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .translation-section {
+    margin-bottom: 32px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .language-flag {
+    width: 38px;
+    height: 25px;
+  }
+
+  .translation-text {
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  .back-button {
+    height: 64px;
+    font-size: 24px;
+    border-radius: 8px;
+  }
+}
+
+/* Desktop - 1024px and up */
+@media (min-width: 1024px) {
+  .translation-container {
+    max-width: 900px;
+  }
+
+  .translation-header {
+    height: 350px;
+  }
+
+  .translation-header .world-map {
+    top: 15px;
+    width: 850px;
+    height: 330px;
+  }
+
+  .translation-header .parrot-logo {
+    top: 100px;
+    left: 120px;
+    width: 150px;
+    height: 134px;
+  }
+
+  .translation-header .brand-text {
+    top: 120px;
+    left: 300px;
+  }
+
+  .translation-header .brand-name {
+    font-size: 72px;
+  }
+
+  .translation-header .brand-tagline {
+    font-size: 18px;
+    margin-top: 20px;
+    width: 280px;
+  }
+
+  .translation-card {
+    margin: 60px auto;
+    padding: 50px 60px;
+    max-width: 650px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .translation-section {
+    margin-bottom: 36px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .language-flag {
+    width: 42px;
+    height: 28px;
+  }
+
+  .translation-text {
+    font-size: 20px;
+    padding: 24px;
+  }
+
+  .back-button {
+    height: 68px;
+    font-size: 26px;
+    border-radius: 10px;
+  }
+
+  .back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(3, 90, 157, 0.3);
+  }
+
+  .back-button:active {
+    transform: translateY(0);
+  }
+}
+
+/* Large Desktop - 1440px and up */
+@media (min-width: 1440px) {
+  .translation-container {
+    max-width: 1100px;
+  }
+
+  .translation-header {
+    height: 400px;
+  }
+
+  .translation-header .world-map {
+    top: 20px;
+    width: 1000px;
+    height: 390px;
+  }
+
+  .translation-header .parrot-logo {
+    top: 120px;
+    left: 180px;
+    width: 170px;
+    height: 152px;
+  }
+
+  .translation-header .brand-text {
+    top: 145px;
+    left: 380px;
+  }
+
+  .translation-header .brand-name {
+    font-size: 80px;
+  }
+
+  .translation-header .brand-tagline {
+    font-size: 20px;
+    margin-top: 22px;
+    width: 320px;
+  }
+
+  .translation-card {
+    margin: 70px auto;
+    padding: 60px 80px;
+    max-width: 750px;
+  }
+
+  .translation-section {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .language-flag {
+    width: 46px;
+    height: 30px;
+  }
+
+  .translation-text {
+    font-size: 22px;
+    padding: 28px;
+  }
+
+  .back-button {
+    height: 72px;
+    font-size: 28px;
+  }
+}
